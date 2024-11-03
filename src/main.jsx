@@ -7,6 +7,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import AddProduct from './Components/addProduct.jsx';
 import UpdateProduct from './Components/updateProduct.jsx';
 
@@ -17,11 +21,11 @@ const router = createBrowserRouter([
     element: <App></App>,
   },
   {
-    path: "addProduct",
+    path: "/add",
     element:  <AddProduct></AddProduct> ,
   },
   {
-    path: "updateProduct",
+    path: "/update",
     element: <UpdateProduct> </UpdateProduct>,
   },
 ]);
