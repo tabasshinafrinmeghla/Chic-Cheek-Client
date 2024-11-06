@@ -1,28 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import AddProduct from './Components/addProduct.jsx';
-import UpdateProduct from './Components/updateProduct.jsx';
-
+import AddProduct from "./Components/addProduct.jsx";
+import UpdateProduct from "./Components/updateProduct.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    loader: () => fetch("http://localhost:5000/product"),
   },
   {
     path: "/add",
-    element:  <AddProduct></AddProduct> ,
+    element: <AddProduct></AddProduct>,
   },
   {
     path: "/update",
@@ -30,8 +26,8 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-      <RouterProvider router={router} />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
