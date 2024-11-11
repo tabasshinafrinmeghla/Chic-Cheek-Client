@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ProductsCard = ({ product }) => {
+const ProductsCard = ({ product, products, setproducts }) => {
   const { _id, name, available, brand, price, category, details, photo } =
     product;
 
@@ -40,6 +40,8 @@ const ProductsCard = ({ product }) => {
                 text: "Your Product has been deleted.",
                 icon: "success",
               });
+              const remaining = products.filter((pro) => pro._id !== _id);
+              setproducts(remaining);
             }
           });
       }
