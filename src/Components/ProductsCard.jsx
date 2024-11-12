@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProductsCard = ({ product, products, setproducts }) => {
-  const { _id, name, available, brand, price, category, details, photo } =
-    product;
+  const { _id, name, brand, price, details, photo } = product;
 
   // delete oparation
   const handleDelet = (_id) => {
@@ -50,7 +49,7 @@ const ProductsCard = ({ product, products, setproducts }) => {
 
   return (
     <div className="card card-side bg-base-100 shadow-xl border-2 mt-2">
-      <figure>
+      <figure className="w-56 h-full ">
         <img className="" src={photo} alt="" />
       </figure>
       <div className="flex justify-between w-full pr-4 m-4 bg-slate-200">
