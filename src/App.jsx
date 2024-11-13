@@ -23,32 +23,57 @@ function App() {
                 Home
               </a>
             </li>
+
+            {/* <div className="dropdown dropdown-hover">
+              <div tabIndex={1} role="button" className="btn ">
+                Hover
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-slate-600 rounded-sm z-[1]  shadow">
+                <li>
+                  <a>Item 1</a>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
+            </div> */}
+
             {/* New Product with Dropdown */}
 
             <li className="relative group">
-              <a href="#" className="hover:text-gray-300">
+              <a
+                href="#"
+                className="hover:text-gray-300 dropdown dropdown-hover">
                 New Product
               </a>
-              <ul className="absolute left-0 hidden bg-gray-700 group-hover:block mt-2 space-y-2 py-2 w-40 rounded">
+              <ul className="absolute left-0 dropdown-content menu hidden bg-gray-700 group-hover:block mt-2 space-y-2 py-2 w-40 rounded">
                 <li>
                   <a
-                    href="<Foundation></Foundation>"
+                    href="/products/foundation" /* Replace with actual path */
                     className="block px-4 py-2 hover:bg-gray-600">
                     Foundation
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+                  <a
+                    href="/products/eyeliner" /* Replace with actual path */
+                    className="block px-4 py-2 hover:bg-gray-600">
                     Eyeliner
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+                  <a
+                    href="/products/eyeshadow" /* Replace with actual path */
+                    className="block px-4 py-2 hover:bg-gray-600">
                     Eyeshadow
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-600">
+                  <a
+                    href="/products/lipstick" /* Replace with actual path */
+                    className="block px-4 py-2 hover:bg-gray-600">
                     Lipstick
                   </a>
                 </li>
@@ -121,12 +146,169 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/* -------------------------------------------------- */}
+
+      <div className="m-5 bg-zinc-300">
+        <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical m-12">
+          <li>
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start mb-10 md:text-end">
+              <img
+                src="/src/assets/360_F_1028378762_falv70QBXDrtaAKNRMfIgL9MB9B2QmFi.jpg"
+                alt=""
+              />
+              <time className="font-mono italic">Brush</time>
+              <div className="text-lg font-black">First Macintosh computer</div>
+              The Apple Macintosh—later rebranded as the Macintosh 128K—is the
+              original Apple Macintosh personal computer. It played a pivotal
+              role in establishing desktop publishing as a general office
+              function. The motherboard, a 9 in (23 cm) CRT monitor, and a
+              floppy drive were housed in a beige case with integrated carrying
+              handle; it came with a keyboard and single-button mouse.
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-end mb-10">
+              <img
+                src="/src/assets/360_F_832393836_aW35rsew1z3YxTf6hy3YVaazS9sZQdJQ.jpg"
+                alt=""
+              />
+              <time className="font-mono italic">Make up Iteam </time>
+              <div className="text-lg font-black">iMac</div>
+              iMac is a family of all-in-one Mac desktop computers designed and
+              built by Apple Inc. It has been the primary part of Apples
+              consumer desktop offerings since its debut in August 1998, and has
+              evolved through seven distinct forms
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start mb-10 md:text-end">
+              <img
+                src="/src/assets/360_F_998742667_JOIrAn2AYcRuboFenDZn4wIGEsDhEGhb.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+              <time className="font-mono italic">Lipstick</time>
+              <div className="text-lg font-black">iPod</div>
+              The iPod is a discontinued series of portable media players and
+              multi-purpose mobile devices designed and marketed by Apple Inc.
+              The first version was released on October 23, 2001, about 8+1⁄2
+              months after the Macintosh version of iTunes was released. Apple
+              sold an estimated 450 million iPod products as of 2022. Apple
+              discontinued the iPod product line on May 10, 2022. At over 20
+              years, the iPod brand is the oldest to be discontinued by Apple
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-end mb-10">
+              <img
+                src="/src/assets/desktop-wallpaper-beautiful-eyes-makeup-background-pink-makeup.jpg"
+                alt=""
+              />
+              <time className="font-mono italic">2007</time>
+              <div className="text-lg font-black">iPhone</div>
+              iPhone is a line of smartphones produced by Apple Inc. that use
+              Apples own iOS mobile operating system. The first-generation
+              iPhone was announced by then-Apple CEO Steve Jobs on January 9,
+              2007. Since then, Apple has annually released new iPhone models
+              and iOS updates. As of November 1, 2018, more than 2.2 billion
+              iPhones had been sold. As of 2022, the iPhone accounts for 15.6%
+              of global smartphone market share
+            </div>
+            <hr />
+          </li>
+          <li>
+            <hr />
+            <div className="timeline-middle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="timeline-start mb-10 md:text-end">
+              <img src="/src/assets/j.webp" alt="" />
+              <time className="font-mono italic">2015</time>
+              <div className="text-lg font-black">Apple Watch</div>
+              The Apple Watch is a line of smartwatches produced by Apple Inc.
+              It incorporates fitness tracking, health-oriented capabilities,
+              and wireless telecommunication, and integrates with iOS and other
+              Apple products and services
+            </div>
+          </li>
+        </ul>
+      </div>
+
       {/* banner --------------------------------- */}
 
       <div className="m-10">
         <div className="diff aspect-[16/9] w-full h-[50vh] object-cover rounded">
           <div className="diff-item-1 ">
-            <img alt="daisy" src="/src/assets/f.jpg" />
+            <img alt="daisy" src="/src/assets/d.jpg " className=" blur-sm" />
           </div>
           <div className="diff-item-2 ">
             <img alt="daisy" src="/src/assets/d.jpg" />
