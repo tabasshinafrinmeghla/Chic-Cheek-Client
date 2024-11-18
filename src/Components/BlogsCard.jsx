@@ -19,13 +19,13 @@ const BlogsCard = () => {
 
     const form = event.target;
     const name = form.name.value;
-    const available = form.available.value;
-    const brand = form.brand.value;
+    const description = form.description.value;
+    const comment = form.comment.value;
     const date = form.date.value; // Get the selected date
     const updateProduct = {
       name,
-      available,
-      brand,
+      description,
+      comment,
       date, // Include the date in the payload
     };
     console.log(updateProduct);
@@ -55,6 +55,13 @@ const BlogsCard = () => {
   return (
     <div className="min-h-screen bg-slate-500 flex flex-col justify-center items-center py-8">
       {/* Video Upload Section */}
+      <div className="mb-1">
+        <label
+          htmlFor="videoUpload"
+          className="block text-sm font-medium text-slate-950 mb-2 text-center">
+          <h1>Uploaded Your Video </h1>
+        </label>
+      </div>
 
       {/* Video Display Section */}
       <div className="w-96 bg-white shadow-lg rounded-lg overflow-hidden">
@@ -80,13 +87,6 @@ const BlogsCard = () => {
           onChange={handleVideoUpload}
           className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-100 file:text-orange-700 hover:file:bg-orange-200"
         />
-      </div>
-      <div className="mb-4 bg-gray-300 p-2 w-96">
-        <label
-          htmlFor="videoUpload"
-          className="block text-sm font-medium text-gray-700 mb-2 text-center">
-          <h1>Uploaded Your Video </h1>
-        </label>
       </div>
 
       {/* Form Section */}
@@ -119,9 +119,9 @@ const BlogsCard = () => {
               <label className="input input-bordered flex items-center gap-2 w-full">
                 <input
                   type="text"
-                  name="name"
+                  name="description"
                   className="w-full text-slate-400"
-                  defaultValue="Blog Title"
+                  defaultValue="description"
                   onFocus={(e) => (e.target.value = "")}
                 />
               </label>
@@ -134,7 +134,7 @@ const BlogsCard = () => {
               <label className="input input-bordered flex items-center gap-2 w-full">
                 <input
                   type="text"
-                  name="brand"
+                  name="comment"
                   className="w-full text-slate-400"
                   defaultValue="Comment"
                   onFocus={(e) => (e.target.value = "")}
