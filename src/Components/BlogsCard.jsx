@@ -53,22 +53,8 @@ const BlogsCard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-orange-100 flex flex-col justify-center items-center py-8">
+    <div className="min-h-screen bg-slate-500 flex flex-col justify-center items-center py-8">
       {/* Video Upload Section */}
-      <div className="mb-4">
-        <label
-          htmlFor="videoUpload"
-          className="block text-sm font-medium text-gray-700 mb-2">
-          <h1>Uploaded Your Video </h1>
-        </label>
-        <input
-          id="videoUpload"
-          type="file"
-          accept="video/*"
-          onChange={handleVideoUpload}
-          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-100 file:text-orange-700 hover:file:bg-orange-200"
-        />
-      </div>
 
       {/* Video Display Section */}
       <div className="w-96 bg-white shadow-lg rounded-lg overflow-hidden">
@@ -85,29 +71,49 @@ const BlogsCard = () => {
           )}
         </div>
       </div>
+
+      <div className="bg-slate-300 m-2 border-r-2 w-96">
+        <input
+          id="videoUpload"
+          type="file"
+          accept="video/*"
+          onChange={handleVideoUpload}
+          className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-100 file:text-orange-700 hover:file:bg-orange-200"
+        />
+      </div>
+      <div className="mb-4 bg-gray-300 p-2 w-96">
+        <label
+          htmlFor="videoUpload"
+          className="block text-sm font-medium text-gray-700 mb-2 text-center">
+          <h1>Uploaded Your Video </h1>
+        </label>
+      </div>
+
       {/* Form Section */}
-      <form onSubmit={handleUpdateProduct}>
+      <form
+        className="bg-stone-400 size-8/12 rounded-xl m-2"
+        onSubmit={handleUpdateProduct}>
         {/* Row 1 */}
 
-        <div className="max-w-full mx-auto px-4 py-4">
+        <div className=" px-4 py-4">
           {" "}
           {/* Wrap the content to ensure full width on large screens */}
           <div className="mb-4">
             {/* Row 1 */}
-            <div className="form-control flex flex-col md:flex-row gap-4 m-3">
-              <div className="w-full md:w-1/2">
-                <h1 className="text-black text-5xl pt-2 pb-2">Blog Title</h1>
-                <label className="input input-bordered flex items-center gap-2 w-full">
-                  <input
-                    type="text"
-                    name="name"
-                    className="w-full text-slate-400"
-                    defaultValue="Blog Title"
-                    onFocus={(e) => (e.target.value = "")}
-                  />
-                </label>
-              </div>
+
+            <div className="w-full md:w-1/2">
+              <h1 className="text-black text-5xl pt-2 pb-2">Blog Title</h1>
+              <label className="input input-bordered flex items-center gap-2 w-full">
+                <input
+                  type="text"
+                  name="name"
+                  className="w-full text-slate-400"
+                  defaultValue="Blog Title"
+                  onFocus={(e) => (e.target.value = "")}
+                />
+              </label>
             </div>
+
             <div className="w-full md:w-1/2">
               <h1 className="text-black text-2xl pt-2">Description</h1>
               <label className="input input-bordered flex items-center gap-2 w-full">
@@ -122,20 +128,20 @@ const BlogsCard = () => {
             </div>
 
             {/* Row 2 */}
-            <div className="form-control flex flex-col md:flex-row gap-4 m-3">
-              <div className="w-full md:w-1/2">
-                <h1 className="text-black text-xl pt-2">Comment</h1>
-                <label className="input input-bordered flex items-center gap-2 w-full">
-                  <input
-                    type="text"
-                    name="brand"
-                    className="w-full text-slate-400"
-                    defaultValue="Comment"
-                    onFocus={(e) => (e.target.value = "")}
-                  />
-                </label>
-              </div>
+
+            <div className="w-full md:w-1/2">
+              <h1 className="text-black text-xl pt-2">Comment</h1>
+              <label className="input input-bordered flex items-center gap-2 w-full">
+                <input
+                  type="text"
+                  name="brand"
+                  className="w-full text-slate-400"
+                  defaultValue="Comment"
+                  onFocus={(e) => (e.target.value = "")}
+                />
+              </label>
             </div>
+
             <div className="w-full md:w-1/2">
               <h1 className="text-black text-xl pt-2">Date</h1>
               <label className="input input-bordered flex items-center gap-2 w-full">
