@@ -17,6 +17,11 @@ export default [
         sourceType: "module",
       },
     },
+
+    env: {
+      module: true,
+    },
+
     settings: { react: { version: "18.3" } },
     plugins: {
       react,
